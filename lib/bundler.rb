@@ -17,6 +17,7 @@ module Bundler
   autoload :Environment,           'bundler/environment'
   autoload :Fetcher,               'bundler/fetcher'
   autoload :GemHelper,             'bundler/gem_helper'
+  autoload :GemHelperMercurial,    'bundler/gem_helper_mercurial'
   autoload :GemHelpers,            'bundler/gem_helpers'
   autoload :GemInstaller,          'bundler/gem_installer'
   autoload :Graph,                 'bundler/graph'

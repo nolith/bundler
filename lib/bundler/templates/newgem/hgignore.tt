@@ -1,0 +1,11 @@
+glob: *.gem
+glob: *.rbc
+relre: ^\.bundle/
+relre: ^\.config/
+relre: ^\.yardoc/
+relre: ^coverage/
+relre: ^rdoc/
+relre: ^doc/
+relre: ^spec/reports/
+glob: Gemfile.lock
+relre: ^pkg/
