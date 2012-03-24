@@ -8,6 +8,7 @@ require "fileutils"
 
 module Bundler
   module Source
+    autoload :Mercurial, 'bundler/mercurial'
     # TODO: Refactor this class
     class Rubygems
       FORCE_MODERN_INDEX_LIMIT = 100 # threshold for switching back to the modern index instead of fetching every spec

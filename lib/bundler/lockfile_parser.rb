@@ -35,6 +35,7 @@ module Bundler
   private
 
     TYPES = {
+      "HG"   => Bundler::Source::Mercurial,
       "GIT"  => Bundler::Source::Git,
       "GEM"  => Bundler::Source::Rubygems,
       "PATH" => Bundler::Source::Path
@@ -42,7 +43,7 @@ module Bundler
 
     def parse_source(line)
       case line
-      when "GIT", "GEM", "PATH"
+      when "HG", "GIT", "GEM", "PATH"
         @current_source = nil
         @opts, @type = {}, line
       when "  specs:"
