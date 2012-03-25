@@ -1,5 +1,6 @@
 before_script:
   - sudo apt-get install groff -y
+  - sudo apt-get install mercurial -y
   - rake spec:deps
 
 env:
