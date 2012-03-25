@@ -7,7 +7,7 @@ describe "Bundler::GemHelperMercurial tasks" do
       app = bundled_app("test")
       helper = Bundler::GemHelperMercurial.new(app.to_s)
       helper.gemspec.name.should == 'test'
-      Dir.exist?("#{app.to_s}/.hg").should be_true, 'Missing .hg folder'
+      File.directory?("#{app.to_s}/.hg").should be_true, 'Missing .hg folder'
       File.exist?("#{app.to_s}/.hgignore").should be_true
       File.exist?("#{app.to_s}/.gitignore").should be_false
     end
@@ -17,7 +17,7 @@ describe "Bundler::GemHelperMercurial tasks" do
       app = bundled_app("test")
       helper = Bundler::GemHelperMercurial.new(app.to_s)
       helper.gemspec.name.should == 'test'
-      Dir.exist?("#{app.to_s}/.git").should be_true, 'Missing .git folder'
+      File.directory?("#{app.to_s}/.git").should be_true, 'Missing .git folder'
       File.exist?("#{app.to_s}/.hgignore").should be_false
       File.exist?("#{app.to_s}/.gitignore").should be_true
       rakefile = File.open("#{app.to_s}/Rakefile", 'r') {|f| f.readlines.map() {|line| line.strip}}
